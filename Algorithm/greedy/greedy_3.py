@@ -1,23 +1,10 @@
-S = str(input())
-arr = []
-i = 0
-j = 1
+s = input()
 result = 0
 
-for num in S:
-    arr.append(num)
-
-while i != len(S)-1 :
-    
-    if int(arr[i]) == 0 or int(arr[j]) ==0 :
-        result = int(arr[i]) + int(arr[j])
+for i in s:
+    if int(i) <=1 or result <=1 : 
+        result += int(i)
     else :
-        result = int(arr[i]) * int(arr[j])
-    
-    i +=1
-    j +=j
-    
+        result *= int(i)
+
 print(result)
-        
-        
-        
