@@ -1,32 +1,18 @@
-from collections import deque
-n,m = map(int, input().split())
+import sys
+input = sys.stdin.readline
 
-graph = []
+n,m,start = map(int,input().split())
 
-for i in range(n) :
-    graph.append(list(map(int,input())))
+visited = [False] * (n+1)
 
-dx = [-1,1,0,0]
-dy = [0,0,-1,1]
+graph = [[] for _ in range(n+1)]
 
-def bfs(x,y) :
-    queue = deque()
-    queue.append((x,y))
+for _ in range(m) :
+    a,b = map(int, input().split())
+    graph[a].append(b)
+    graph[b].append(a)
 
-    while queue :
-        x,y = queue.popleft()
-        for i in range(4) :
-            nx = x + dx[i]
-            ny = y + dy[i]
+print(graph)
 
-            if nx < 0 or ny < 0 or nx >= n or ny >=m :
-                continue
-            if graph[nx][ny] == 0:
-                continue
-            if graph[nx][ny] == 1:
-                graph[nx][ny] = graph[x][y] +1
-                queue.append((nx,ny))
-    return graph[n-1][m-1]
 
-print(bfs(0,0))
 
