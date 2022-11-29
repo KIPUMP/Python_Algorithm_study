@@ -5,12 +5,16 @@ def DFS(graph, start_node):
     need_visited = list()
     #출발 node need_visited 리스트에 삽입
     need_visited.append(start_node)
+
     #need_visited node가 없을 때 까지 반복
     while need_visited :
         node = need_visited.pop()
+
         if node not in visited :
+            
             visited.append(node)
             need_visited.extend(graph[node])
+
     print(visited)
 
 

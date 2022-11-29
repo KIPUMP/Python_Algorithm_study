@@ -13,7 +13,7 @@ def BFS(graph, start_node):
         if node not in visited:
             #visited 리스트에 node  넣고,
             visited.append(node)
-            # 해당 node에 연결된 노드 need_visited 리스트에 넣기
+            # 해당 node에 연결된 노드 extand 사용해서  need_visited 리스트에 넣기
             need_visited.extend(graph[node])
     print(visited)
 
