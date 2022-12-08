@@ -16,5 +16,5 @@ arr = list(map(int, input().split()))
 
 result = binary_search(arr, target, 0, n-1)
 
-print(result+1)
+print(result)
 
