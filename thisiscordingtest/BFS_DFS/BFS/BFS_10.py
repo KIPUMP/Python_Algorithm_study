@@ -6,8 +6,8 @@ for _ in range(n) :
   graph.append(list(map(int,input().split())))
 
 
-dx = [-1,1,0,0]
-dy = [0,0,-1,1]
+dx = [0,0,1,-1]
+dy = [-1,1,0,0]
 
 def bfs(x,y) :
   queue = deque()
