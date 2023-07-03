@@ -1,14 +1,12 @@
-def GCD(m,n) :
-  if n == 0 :
-    return m 
+def GCD(a,b) :
+  if b == 0 :
+    return a
   else :
-    return GCD(n,m%n)
+    return GCD(b,a%b)
 
-def LCM(m,n) :
-  return (m*n) // GCD(m,n)
+def LCM(a,b) :
+  return (a*b) // GCD(a,b)
 
-
-m,n = map(int,input().split())
-
-print(GCD(m,n))
-print(LCM(m,n))
+a,b = map(int,input().split())
+print(GCD(a,b))
+print(LCM(a,b))
