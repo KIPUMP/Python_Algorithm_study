@@ -17,3 +17,7 @@ while arr[N-1] >= x :
 print(max(cutting))
 
 
+
+
+
+
