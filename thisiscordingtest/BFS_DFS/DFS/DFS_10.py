@@ -1,10 +1,9 @@
-def dfs(graph,v,visited) :
-  visited[v] = True
+def dfs(start,v,visited) :
+  visited[v] = True 
   print(v,end=" ")
   for i in graph[v] :
     if visited[i] == False :
       dfs(graph,i,visited)
-
 graph = [
     [],										# 0 번 노드는 null
     [2,3,8],
