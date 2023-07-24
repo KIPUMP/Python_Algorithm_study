@@ -1,7 +1,9 @@
 from collections import deque
+
 def bfs(graph,start,visited) :
   queue = deque([start])
   visited[start] = True
+
   while queue :
     v = queue.popleft()
     print(v,end=" ")
@@ -9,7 +11,7 @@ def bfs(graph,start,visited) :
       if visited[i] == False :
         queue.append(i)
         visited[i] = True
-  
+
 graph = [
     [],										# 0 번 노드는 null
     [2,3,8],
@@ -22,6 +24,6 @@ graph = [
     [1,7]
 ]  
 
-visited = [False] * 9
+visited = [False] * 9 
 
 bfs(graph,1,visited)

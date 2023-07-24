@@ -1,14 +1,14 @@
-def binary_search(arr,target,start,end) :
+def BS(arr,target,start,end) :
   if start > end :
     return False 
   else :
-    mid = (start + end) // 2
+    mid = (start + end) // 2 
     if arr[mid] == target :
       return mid
-    elif arr[mid] > target :
-      return binary_search(arr,target,start,mid-1)
+    elif arr[mid] < target :
+      return BS(arr,target,mid+1,end)
     else :
-      return binary_search(arr,target,mid+1,end)
+      return BS(arr,target,start,mid-1)
 
 
 
