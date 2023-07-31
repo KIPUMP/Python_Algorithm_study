@@ -1,7 +1,6 @@
 def dfs(graph,v,visited) :
   visited[v] = True
   print(v,end=" ")
-
   for i in graph[v] :
     if visited[i] == False :
       dfs(graph,i,visited)
