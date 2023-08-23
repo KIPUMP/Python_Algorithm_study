@@ -5,4 +5,13 @@ for i in range(int(input())) :
     ipt += map(int,input().split())
   
   arr = []
-  ans = 
+  ans = []
+  for i,v in enumerate(ipt) :
+    arr.append(v)
+    if(i & 1) == 0 :
+      arr.sort()
+      ans.append(arr[i // 2])
+  print(len(ans))
+  for i in range(len(ans) // 10 + 1 if len(ans) % 10 else len(ans) // 10) :
+    print(*ans[i * 10 : (i+1) * 10])
+
