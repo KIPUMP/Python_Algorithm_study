@@ -1,14 +1,15 @@
 from collections import deque
 
-def bfs(graph,start,visited) :
-  queue = deque([start]) 
-  visited[start] = True
+queue = deque()
 
-  while queue :
-    v = queue.popleft()
+def bfs(graph,start,visited) :
+  queue.append(start)                     # queue에 노드 삽입
+  visited[start] = True
+  while queue :                     
+    v = queue.popleft()                   # queue가 있는 동안 queue의 원소를 하나씩 뽑는다
     print(v,end=" ")
     for i in graph[v] :
-      if visited[i] == False :
+      if not visited[i] :
         queue.append(i)
         visited[i] = True
 
